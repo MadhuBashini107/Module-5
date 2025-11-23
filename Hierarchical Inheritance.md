@@ -27,14 +27,68 @@ To write a Python program to get the employee and doctor details and display the
 ---
 
 ### PROGRAM
+```python
+class Details:
+    def __init__(self, id, name, gender):
+        self.id = id
+        self.name = name
+        self.gender = gender
+
+    def display_details(self):
+        print("Id: ", self.id)
+        print("Name: ", self.name)
+        print("Gender: ", self.gender)
+
+class Employee(Details):
+    def __init__(self, id, name, gender, company, department):
+        super().__init__(id, name, gender)
+        self.company = company
+        self.department = department
+
+    def display_details(self):
+        print("Employee Object")
+        super().display_details()
+        print("Company: ", self.company)
+        print("Department: ", self.department)
+
+class Doctor(Details):
+    def __init__(self, id, name, gender, hospital, department):
+        super().__init__(id, name, gender)
+        self.hospital = hospital
+        self.department = department
+
+    def display_details(self):
+        print("Doctor Object")
+        super().display_details()
+        print("Hospital: ", self.hospital)
+        print("Department: ", self.department)
+
+emp_id = input()
+emp_name = input()
+emp_gender = input()
+emp_company = input()
+emp_department = input()
+
+doc_id = input()
+doc_name = input()
+doc_gender = input()
+doc_hospital = input()
+doc_department = input()
+
+employee = Employee(emp_id, emp_name, emp_gender, emp_company, emp_department)
+doctor = Doctor(doc_id, doc_name, doc_gender, doc_hospital, doc_department)
+
+employee.display_details()
+print()
+doctor.display_details()
+
 ```
-
-
-```
-
+---
 ### OUTPUT  
 
-(Output Screenshot)  
+  
+<img width="1515" height="773" alt="image" src="https://github.com/user-attachments/assets/e093e844-2b44-4669-9a30-608ba4ed781d" />
 
-
+---
 ### RESULT
+Thus, the Python program retrieves employee and doctor details and displays them using hierarchical inheritance. A parent (base) class named Details and two child (derived) classes, Employee and Doctor, were implemented and executed successfully.
