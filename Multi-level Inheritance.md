@@ -38,11 +38,38 @@ To write a Python program to get the name, age, and ID of a person and display t
 
 ### PROGRAM
 
+```python
+class Person_name:
+    def get_name(self,name):
+        self.name=name
+        
+class Person_age(Person_name):
+    def get_age(self,age):
+        self.age=age
+        
+class Person_salary(Person_age):
+    def get_salary(self,salary):
+        self.salary=salary
+        
+    def display(self):
+        print(self.name, self.age, self.salary)
+        
+name=input()
+age=input()
+salary=input()
+
+p=Person_salary()
+p.get_name(name)
+p.get_age(age)
+p.get_salary(salary)
+p.display()
+
 ```
-
-
-```
-
+---
 ### OUTPUT
 
+<img width="1255" height="214" alt="image" src="https://github.com/user-attachments/assets/6c984907-3126-4c0a-b74e-ddf62e748c49" />
+
+---
 ### RESULT
+Thus the Python program to get the name, age, and ID of a person and display them using multilevel inheritance was implemented and executed successfully.
